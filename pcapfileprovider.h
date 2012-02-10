@@ -11,4 +11,5 @@ public:
     PcapFileProvider();
 };
 }
+
 #endif // PCAPFILEPROVIDER_H

@@ -4,12 +4,14 @@ CONFIG -= qt
 
 SOURCES += main.cpp \
     genericprovider.cpp \
-    pcapfileprovider.cpp
+    pcapfileprovider.cpp \
+    pcapliveprovider.cpp
 
 OTHER_FILES += \
     Readme.txt
 
 HEADERS += \
     genericprovider.h \
-    pcapfileprovider.h
+    pcapfileprovider.h \
+    pcapliveprovider.h
 
