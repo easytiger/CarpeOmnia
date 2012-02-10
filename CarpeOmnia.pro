@@ -2,8 +2,14 @@ TEMPLATE = app
 CONFIG += console
 CONFIG -= qt
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    genericprovider.cpp \
+    pcapfileprovider.cpp
 
 OTHER_FILES += \
     Readme.txt
+
+HEADERS += \
+    genericprovider.h \
+    pcapfileprovider.h
 
