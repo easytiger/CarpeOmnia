@@ -5,10 +5,10 @@
 
 namespace CarpeOmnia
 {
-class PcapLiveProvider : GenericProvider
-{
-public:
-    PcapLiveProvider();
-};
+    class PcapLiveProvider : GenericProvider
+    {
+    public:
+        PcapLiveProvider();
+    };
 }
 #endif // PCAPLIVEPROVIDER_H

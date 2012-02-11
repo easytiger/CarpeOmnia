@@ -4,10 +4,11 @@
 
 namespace CarpeOmnia
 {
-class GenericProvider
-{
-public:
-    GenericProvider();
-};
+    class GenericProvider
+    {
+    public:
+        GenericProvider();
+        virtual void getnextPacket() = 0;
+    };
 }
 #endif // GENERICPROVIDER_H
