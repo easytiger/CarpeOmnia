@@ -15,5 +15,8 @@ HEADERS += \
     pcapfileprovider.h \
     pcapliveprovider.h
 
-LIBS += -lpcap
+LIBS += -lpcap -lglog
 
+# config4star linking
+INCLUDEPATH += /home/gerry/Downloads/libraries/config4cpp/include
+LIBS  += -L/home/gerry/Downloads/libraries/config4cpp/lib -lconfig4cpp
