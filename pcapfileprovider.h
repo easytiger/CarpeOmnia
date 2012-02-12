@@ -2,7 +2,7 @@
 #define PCAPFILEPROVIDER_H
 
 #include "genericprovider.h"
-#include <pcap.h>
+#include <pcap/pcap.h>
 
 namespace CarpeOmnia
 {
@@ -10,9 +10,10 @@ namespace CarpeOmnia
     {
     public:
         PcapFileProvider();
+        ~PcapFileProvider();
         void getnextPacket();
     private:
-
+        pcap_t * mPcap;
     };
 }
 
