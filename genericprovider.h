@@ -4,6 +4,8 @@
 #include <string>
 #include <stdexcept>
 
+#include "pcap/pcap.h"
+
 using namespace std;
 
 namespace CarpeOmnia
@@ -13,6 +15,15 @@ namespace CarpeOmnia
     public:
         GenericProvider();
         virtual bool getnextPacket() = 0;
+    protected:
+
+        void applyBPF(char filter_exp[]);
+
+        pcap_t * mPcap;             // pcap handle
+        struct pcap_pkthdr header;	// The header that pcap gives us
+        const u_char *packet;		// The actual packet
+
+
 
     };
 }

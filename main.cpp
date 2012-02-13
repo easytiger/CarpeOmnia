@@ -27,7 +27,6 @@ int main(int argc, char** argv)
     init_logging(argv);
 
     Configuration * cfg; // config object to pass around to each module
-
     GenericProvider * pfp;
 
     try {

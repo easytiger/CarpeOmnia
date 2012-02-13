@@ -15,7 +15,7 @@ namespace CarpeOmnia
         ~PcapFileProvider();
         bool getnextPacket();
     private:
-        pcap_t * mPcap;
+
     };
 }
 
