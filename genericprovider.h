@@ -12,7 +12,7 @@ namespace CarpeOmnia
     {
     public:
         GenericProvider();
-        virtual void getnextPacket() = 0;
+        virtual bool getnextPacket() = 0;
 
     };
 }

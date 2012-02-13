@@ -13,7 +13,7 @@ namespace CarpeOmnia
     public:
         PcapFileProvider();
         ~PcapFileProvider();
-        void getnextPacket();
+        bool getnextPacket();
     private:
         pcap_t * mPcap;
     };

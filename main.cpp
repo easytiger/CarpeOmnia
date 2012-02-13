@@ -13,6 +13,8 @@ using namespace config4cpp;
 void init_logging(char** argv)
 {
     google::InitGoogleLogging(argv[0]);
+    google::LogToStderr();
+
 }
 
 void init_config_manager(Configuration * cfg)
@@ -23,21 +25,23 @@ void init_config_manager(Configuration * cfg)
 int main(int argc, char** argv)
 {
     init_logging(argv);
-    Configuration * cfg;
-    init_config_manager(cfg);
 
+    Configuration * cfg; // config object to pass around to each module
 
-    LOG(INFO) << "Intialising CarpeOmnia\n";
     GenericProvider * pfp;
 
     try {
+        LOG(INFO) << "Intialising CarpeOmnia\n";
         pfp = new PcapFileProvider();
+        init_config_manager(cfg);
     } catch (std::exception const & e)
     {
         LOG(INFO) <<"Exiting after fatal exception caught: " << e.what() << endl;
         return (2);
     }
 
-    pfp->getnextPacket();
+    while (pfp->getnextPacket()){
+    }
+
     return 0;
 }
