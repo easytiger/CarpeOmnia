@@ -22,9 +22,6 @@ namespace CarpeOmnia
         pcap_t * mPcap;             // pcap handle
         struct pcap_pkthdr header;	// The header that pcap gives us
         const u_char *packet;		// The actual packet
-
-
-
     };
 }
 #endif // GENERICPROVIDER_H

@@ -22,10 +22,11 @@ CarpeOmnia::PcapFileProvider::PcapFileProvider()
 
 bool CarpeOmnia::PcapFileProvider::getnextPacket()
 {
-    LOG(INFO) << "Called CarpeOmnia::PcapFileProvider::getnextPacket()\n";
+    //LOG(INFO) << "Called CarpeOmnia::PcapFileProvider::getnextPacket()\n";
 
     packet = pcap_next(mPcap, &header);
-    LOG(INFO) << "Received a packet of len: " << header.len;
+    bpf_u_int32 len = header.len;
+    LOG(INFO) << "Received a packet of len: " << len;
 
     if (packet == NULL)
         return false;
